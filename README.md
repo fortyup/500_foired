@@ -2,15 +2,15 @@
 
 ## 📚 Table of Contents
 
-- [Description](#description)
-- [Technologies](#technologies)
-- [How to run](#how-to-run)
-- [Usage](#usage)
+- [Description](#-description)
+- [Technologies](#-technologies)
+- [How to run](#-how-to-run)
+- [Usage](#-usage)
    - [Users](#users)
    - [User](#user)
    - [Movies](#movies)
    - [Favorite](#favorite)
-- [Author](#author)
+- [Author](#-author)
 
 ## 📖 Description
 
