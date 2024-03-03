@@ -1,9 +1,9 @@
 'use strict';
 
 const Amqp = require('amqplib');
-const MailService = require('../services/mail');
+const MailService = require('../lib/services/mail');
 
-const receiveCsvFromQueue = async () => {
+async function receiveCsvFromQueue() {
     const queue = 'movie-export'; // Nom de la file d'attente RabbitMQ
 
     try {
@@ -33,7 +33,9 @@ const receiveCsvFromQueue = async () => {
     } catch (error) {
         console.error('Error:', error);
     }
-};
+}
+
+
 
 const  sendCsvByEmail = (csvData) => {
     // Envoyer les données CSV par e-mail en utilisant le service MailService
@@ -44,6 +46,4 @@ const  sendCsvByEmail = (csvData) => {
     console.log(' [x] Sent CSV data by email');
 };
 
-// Démarrer l'écoute de la file d'attente
-console.log('Starting to listen to the queue...');
-receiveCsvFromQueue();
+module.exports = { receiveCsvFromQueue };
