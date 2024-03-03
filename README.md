@@ -5,12 +5,12 @@
 - [Description](#-description)
 - [Technologies](#-technologies)
 - [How to run](#-how-to-run)
-- [Usage](#-usage)
+- [Usage](#%EF%B8%8F-usage)
    - [Users](#users)
    - [User](#user)
    - [Movies](#movies)
    - [Favorite](#favorite)
-- [Author](#-author)
+- [Author](#%EF%B8%8F-author)
 
 ## 📖 Description
 
