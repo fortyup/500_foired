@@ -36,7 +36,8 @@ and authorization.
 5. Install the dependencies: `npm install`
 6. Run the migrations: `npx knex migrate:latest`,
 7. Run the seeds `knex seed:run`
-7. Start the server: `npm start`
+8. Start the server: `npm start`
+9. The server will be running on http://localhost:3000
 
 ## 🛠️ Usage
 
