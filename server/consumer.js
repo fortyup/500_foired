@@ -3,7 +3,7 @@
 const Amqp = require('amqplib');
 const MailService = require('../lib/services/mail');
 
-async function receiveCsvFromQueue() {
+const receiveCsvFromQueue = async () => {
     const queue = 'movie-export'; // Nom de la file d'attente RabbitMQ
 
     try {
@@ -33,7 +33,7 @@ async function receiveCsvFromQueue() {
     } catch (error) {
         console.error('Error:', error);
     }
-}
+};
 
 
 
