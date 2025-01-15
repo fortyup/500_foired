@@ -31,15 +31,21 @@ and authorization.
 
 1. Clone the repository
 2. Navigate to the project directory: `cd CineFlixAPI`
-3. Run `docker run --name hapi-mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=hapi -e MYSQL_ROOT_PASSWORD=hapi -e MYSQL_DATABASE=user -d -p 3308:3306 mysql:8 mysqld --default-authentication-plugin=mysql_native_password`
+3. Run `docker run --name hapi-mysql -e MYSQL_USER=fortyup -e MYSQL_PASSWORD=hapi -e MYSQL_ROOT_PASSWORD=hapi -e MYSQL_DATABASE=user -d -p 3308:3306 mysql:8 mysqld --default-authentication-plugin=mysql_native_password`
 4. Run `docker run -it --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management` to start a RabbitMQ container.
 5. Install the dependencies: `npm install`
 6. Run the migrations: `npx knex migrate:latest`,
-7. Run the seeds `knex seed:run`
+7. Run the seeds `npx knex seed:run`
 8. Start the server: `npm start`
-9. The server will be running on http://localhost:3000
+9. The server will be running on http://localhost:3000/documentation
+10. Connect to the server using the credentials:
+    - Mail: `admin@gmail.com`
+    - Password: `adminadmin`
+11. Put the JWT token in the `Authorize` header to access the other routes.
 
 ## 🛠️ Usage
+
+You can connect to MySQL using the following command: ```bash mysql -h localhost -P 3308 -u fortyup -p``` and the password is `hapi`.
 
 The API has the following routes:
 
