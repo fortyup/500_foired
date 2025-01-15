@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: hapi-mysql
+    environment:
+      MYSQL_USER: fortyup
+      MYSQL_PASSWORD: hapi
+      MYSQL_ROOT_PASSWORD: hapi
+      MYSQL_DATABASE: user
+    ports:
+      - "3308:3306"
+    command: --default-authentication-plugin=mysql_native_password
+
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
